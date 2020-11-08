@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ГГ</title>
+<style>
+{
+margin:0;
+padding: 0;
+outline: none;
+}
+label {
+display: block;
+padding: 20px;
+margin: 20px;
+border: 1px solid red;
+}
+
+</style>
+</head>
+<body>
+<label for="n">Введіть n:  <input type="text" id="n"></label>
+<label for="s">Введіть s:  <input type="text" id="s"></label>
+<label for="resultp">Результат: p= <input type="text" id="resultp"></label>
+<label for="resultq">Результат: q= <input type="text" id="resultq"></label>
+<button>Посчитать</button>
+<script>
+document.querySelector('button').onclick = function(){
+
+  var n = document.getElementById('n').value;
+
+  var s = document.getElementById('s').value;
+
+  n=parseInt(n);
+  s=parseInt(s);
+
+  var resultpElem = document.getElementById('resultp');
+
+  var resultqElem = document.getElementById('resultq');
+
+ 
+
+  var resultp = Math.exp(2*n)*Math.cos(n+s)-4*s;
+  
+  var resultq = ((Math.pow(Math.sin(s+4*n),2)-3)/(2*n+7*s))+Math.sqrt(n);
+
+  resultpElem.value = resultp;
+
+  resultqElem.value = resultq;
+
+}
+
+</script>
+
+</body>
+
+</html>
